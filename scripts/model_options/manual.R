@@ -1,4 +1,4 @@
-﻿# Optional: specify a hypothesis about blocks and their interaction probabilities.
+# Optional: specify a hypothesis about blocks and their interaction probabilities.
 # Selected by the source line in 03b; requires 03a first.
 # These starting assignments and probabilities are arbitrary teaching examples.
 # Replace them with ecologically justified choices for a real analysis.
@@ -16,6 +16,7 @@ consumer_lookup <- tibble(
 # Example syntax: palm_block_2_species <- c("exact_name_1", "exact_name_2")
 palm_block_2_species <- rownames(regional_web)[1:2]
 mammal_block_2_species <- colnames(regional_web)[1:2]
+
 producer_lookup <- producer_lookup |>
   mutate(guild = if_else(species %in% palm_block_2_species,
                          "palm_block_2", "palm_block_1"))
