@@ -1,0 +1,189 @@
+---
+title: "Spatial inference of ecological networks"
+subtitle: "Metaweave R package"
+author: "Gabriel Munoz-Acevedo"
+institute: "Community Ecology and Biogeography Lab"
+format:
+  revealjs:
+    theme: simple
+    slide-number: c/t
+    transition: fade
+    center: false
+    width: 1280
+    height: 720
+    margin: 0.08
+    controls: true
+    progress: true
+    hash: true
+    embed-resources: true
+    navigation-mode: linear
+    footer: "Spatial inference of ecological networks · MetaWeave"
+include-in-header:
+  text: |
+    <style>
+    .reveal { font-family: Arial, sans-serif; font-size: 32px; color: #183c3b; }
+    .reveal h1, .reveal h2, .reveal h3 { font-family: Arial, sans-serif; color: #125c52; text-transform: none; }
+    .reveal h2 { font-size: 1.6em; margin-bottom: 0.65em; }
+    .reveal h3 { font-size: 1.05em; }
+    .reveal p, .reveal li { line-height: 1.35; }
+    .reveal strong { color: #125c52; }
+    .reveal table { font-size: 0.83em; }
+    .reveal th { color: #125c52; }
+    .reveal .takeaway { margin-top: 1.1em; padding-top: 0.5em; border-top: 3px solid #c48547; font-size: 1.04em; }
+    .reveal .small { font-size: 0.64em; color: #526866; }
+    .reveal .columns { gap: 2em; }
+    .reveal code { font-size: 0.8em; }
+    </style>
+execute:
+  enabled: false
+---
+
+## Species interactions in Ecological Communities
+
+
+
+::: column 
+
+- Interactions are the backbone of ecological communities.
+
+- The collective of interactions in a community describe their **organization** and **potential vulnerability to disturbance**.
+
+- Ecological networks (e.g. producer-consumer networks) capture these diversity
+
+- The variation in ecological network structure describes how interactions among species in a community vary across space and/or time
+:::
+
+::: column 
+
+![](images/clipboard-2180557620.png)
+::: 
+
+## Limitations to study the biogeography of species interactions
+
+::: column 
+
+#### Data
+
+- Documenting local ecological networks remains difficult and costly.
+
+- Sparse local interaction data
+
+
+:::
+
+::: column 
+#### Logic 
+- Fragmented analytic applications 
+
+- Limited software ecosystem 
+
+
+:::
+
+::: takeaway
+
+**MetaWeave separates local assemblages, interaction models, and network outputs into interchangeable components.**
+
+:::
+
+
+
+## Regional metawebs support spatial inference of networks
+
+A **metaweb** describes interactions that may occur in a regional species pool.
+
+- Aggregated network summary across many locally observed networks in a region
+
+- The Metaweb can inform statistical models that predict network assembly
+
+
+::: takeaway
+Existing approaches connect distributions, traits, and environmental conditions to network predictions, but their implementations remain fragmented.
+
+:::
+
+
+## A common interface for interaction inference
+
+For each local assemblage, MetaWeave applies an inference model through a common interface:
+
+$$\widehat{G}_{\ell}=\mathcal{I}(C_{\ell},M),$$
+where $\widehat{G}_{\ell}$ is the inferred network at locality $\ell$, $C_{\ell}$ is its species assemblage, $M$ is the supplied model and $\mathcal{I}$ is the inference procedure.
+
+::: takeaway
+Metaweave functions revolve around two ecological inference problems:
+
+- Same communities, different interaction assumptions: *How do interaction assembly shape network structure?*
+
+- Same interaction assumptions, different communities: *How does species turnover reshape potential networks?*
+:::
+
+
+## Available in CRAN 
+
+<br> 
+
+<br> 
+``` r 
+install.packages('metaweave')
+
+library(metaweave)
+```
+
+
+
+
+
+## Local assemblages begin with species distributions
+
+### `assemble_communities()`
+
+Build local species lists from a named collection of aligned distribution rasters.
+
+``` r
+assemblages <- assemble_communities(
+  distributions,
+  min_species = 1L
+)
+```
+
+`distributions` a named list for each trophic level with a raster stack on each slot
+
+- One raster layer per species. 
+- Presence–absence inputs.
+
+## Interaction models express ecological assumptions
+
+| Function | Supplied information |
+|------------------------------------|------------------------------------|
+| `probability_matrix_model()` | Named species-pair probabilities or binary regional links |
+| `block_model()` | Species memberships and probabilities between blocks |
+| `new_inference_model()` | A custom prediction function, optionally using traits or local context |
+
+
+## Inference retains the local interaction matrices
+
+| Function                             | Scope                             |
+|--------------------------------------|-----------------------------------|
+| `infer_network(assemblage, model)`   | One local community               |
+| `infer_networks(assemblages, model)` | A collection of local communities |
+
+``` r
+networks <- infer_networks(assemblages, model)
+networks$networks[[1]]$matrix
+```
+## Convenience functions combine the workflow steps
+
+| Function | What it combines |
+|------------------------------------|------------------------------------|
+| `reconstruct_networks()` | Assemblage construction and local network inference |
+| `run_spatial_inference()` | Assemblage construction, inference, summaries, and mapped metrics |
+
+``` r
+result <- run_spatial_inference(
+  distributions,
+  model,
+  min_species = 1L
+)
+```
+

@@ -1,0 +1,49 @@
+"habitat","response","metric","scale","mean","lower","upper"
+0.75,"Isolation response","expected_links","absolute",-5.15692732005977,-5.57151617888879,-4.80334318824859
+0.75,"Isolation response","expected_links","percent",-12.5353084133084,-13.2511071183478,-11.8816144401851
+0.75,"Isolation response","pollinator_richness","absolute",-1.41911111111111,-1.51753402777778,-1.33383055555556
+0.75,"Isolation response","pollinator_richness","percent",-12.5985046602606,-13.3037788277787,-11.9616379115549
+0.75,"Isolation response","total_richness","absolute",-1.41533333333333,-1.51486111111111,-1.32857777777778
+0.75,"Isolation response","total_richness","percent",-7.10556362332302,-7.53417722793078,-6.71686705758324
+0.75,"Isolation response","connectance","absolute",-0.000297931510905991,-0.000730483523657318,0.000121681779810872
+0.75,"Isolation response","connectance","percent",-0.0689554055400209,-0.176614834246606,0.0343117665977766
+0.75,"No isolation response","expected_links","absolute",-0.00502116276575582,-0.0947881438389114,0.0861222972347785
+0.75,"No isolation response","expected_links","percent",-0.0159704149814369,-0.207779396149383,0.176551491967133
+0.75,"No isolation response","pollinator_richness","absolute",-0.00786111111111118,-0.0233062500000001,0.00783402777777757
+0.75,"No isolation response","pollinator_richness","percent",-0.0597787560339665,-0.179317757053768,0.0616425310170416
+0.75,"No isolation response","total_richness","absolute",-0.00408333333333341,-0.0233055555555553,0.0156118055555556
+0.75,"No isolation response","total_richness","percent",-0.019040827064654,-0.107784685234564,0.0723745582016145
+0.75,"No isolation response","connectance","absolute",-9.50780474394952e-05,-0.000345170778233404,0.000142361489305731
+0.75,"No isolation response","connectance","percent",-0.0232817102379383,-0.0849918578413716,0.0348778003780865
+0.5,"Isolation response","expected_links","absolute",-11.7115907466972,-12.3892161423742,-11.0647853788304
+0.5,"Isolation response","expected_links","percent",-32.3455666785923,-33.3565831089983,-31.3434120126669
+0.5,"Isolation response","pollinator_richness","absolute",-3.18845833333333,-3.33542083333333,-3.05174791666667
+0.5,"Isolation response","pollinator_richness","percent",-32.211366457623,-33.1608008425067,-31.2676775867774
+0.5,"Isolation response","total_richness","absolute",-3.18554166666667,-3.33391979166667,-3.04562395833333
+0.5,"Isolation response","total_richness","percent",-17.1743822166203,-17.8221206609627,-16.5561182236175
+0.5,"Isolation response","connectance","absolute",-0.000328391198044185,-0.00135007643149118,0.000709594198458184
+0.5,"Isolation response","connectance","percent",-0.073688483047917,-0.32291894497581,0.179808424304822
+0.5,"No isolation response","expected_links","absolute",-0.00398301325334979,-0.148787102017762,0.14083702653479
+0.5,"No isolation response","expected_links","percent",-0.0132951120569461,-0.316404531180461,0.289965931968422
+0.5,"No isolation response","pollinator_richness","absolute",-0.00895833333333359,-0.0323354166666671,0.0137114583333331
+0.5,"No isolation response","pollinator_richness","percent",-0.0687508077817456,-0.249498954834999,0.106599862638219
+0.5,"No isolation response","total_richness","absolute",-0.00604166666666674,-0.0326708333333332,0.0208760416666661
+0.5,"No isolation response","total_richness","percent",-0.0275499731828193,-0.150976390283773,0.0972916938403874
+0.5,"No isolation response","connectance","absolute",-5.97111157750111e-05,-0.000437265429660644,0.0003515497681941
+0.5,"No isolation response","connectance","percent",-0.0127321068553394,-0.104509779099174,0.0894320245178531
+0.25,"Isolation response","expected_links","absolute",-15.3973883357322,-16.4769922763631,-14.3124659693044
+0.25,"Isolation response","expected_links","percent",-53.9217371934883,-55.603630885425,-52.2350734726938
+0.25,"Isolation response","pollinator_richness","absolute",-4.19641666666667,-4.4499375,-3.94239166666667
+0.25,"Isolation response","pollinator_richness","percent",-53.8093797282041,-55.3828764496579,-52.2133647291081
+0.25,"Isolation response","total_richness","absolute",-4.17641666666667,-4.42800625,-3.92316666666667
+0.25,"Isolation response","total_richness","percent",-25.3551373009152,-26.5112992243686,-24.1940053512951
+0.25,"Isolation response","connectance","absolute",-0.000929445286453103,-0.00309742752696448,0.00122853706127561
+0.25,"Isolation response","connectance","percent",-0.193754612564163,-0.72204004524763,0.330637520429123
+0.25,"No isolation response","expected_links","absolute",0.153296873822647,-0.0669000013411623,0.386704383932315
+0.25,"No isolation response","expected_links","percent",0.334207369314482,-0.14315067150146,0.845676590430322
+0.25,"No isolation response","pollinator_richness","absolute",0.0245,-0.0188333333333334,0.0655874999999999
+0.25,"No isolation response","pollinator_richness","percent",0.19129837052578,-0.145662290810688,0.509572267780722
+0.25,"No isolation response","total_richness","absolute",0.0444999999999999,-0.00899999999999975,0.0994208333333335
+0.25,"No isolation response","total_richness","percent",0.208568685112545,-0.0395991824469019,0.463592556028529
+0.25,"No isolation response","connectance","absolute",7.64160402779786e-05,-0.000677202991644587,0.000893892508660599
+0.25,"No isolation response","connectance","percent",0.0337421178858856,-0.153151284162643,0.236422135604969
