@@ -1,4 +1,5 @@
-﻿# Focused workshop | 03a. Empirical inputs | 3 minutes
+# Focused workshop | 03a. Empirical inputs | 3 minutes
+
 # Requires 00_setup.R. Replaces the toy distributions with palm-mammal data.
 
 # 1. Prepared empirical inputs -------------------------------------

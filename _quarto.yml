@@ -1,0 +1,11 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Metaweave Lab Meeting"
+
+format:
+  revealjs:
+    theme: default
+    slide-number: true

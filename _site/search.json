@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "index.html#species-interactions-in-ecological-communities",
+    "href": "index.html#species-interactions-in-ecological-communities",
+    "title": "Spatial inference of ecological networks",
+    "section": "Species interactions in Ecological Communities",
+    "text": "Species interactions in Ecological Communities\n\n\nInteractions are the backbone of ecological communities.\nThe collective of interactions in a community describe their organization and potential vulnerability to disturbance.\nEcological networks (e.g. producer-consumer networks) capture these diversity\nThe variation in ecological network structure describes how interactions among species in a community vary across space and/or time"
+  },
+  {
+    "objectID": "index.html#limitations-to-study-the-biogeography-of-species-interactions",
+    "href": "index.html#limitations-to-study-the-biogeography-of-species-interactions",
+    "title": "Spatial inference of ecological networks",
+    "section": "Limitations to study the biogeography of species interactions",
+    "text": "Limitations to study the biogeography of species interactions\n\nData\n\nDocumenting local ecological networks remains difficult and costly.\nSparse local interaction data\n\n\nLogic\n\nFragmented analytic applications\nLimited software ecosystem\n\n\nMetaWeave separates local assemblages, interaction models, and network outputs into interchangeable components."
+  },
+  {
+    "objectID": "index.html#regional-metawebs-support-spatial-inference-of-networks",
+    "href": "index.html#regional-metawebs-support-spatial-inference-of-networks",
+    "title": "Spatial inference of ecological networks",
+    "section": "Regional metawebs support spatial inference of networks",
+    "text": "Regional metawebs support spatial inference of networks\nA metaweb describes interactions that may occur in a regional species pool.\n\nAggregated network summary across many locally observed networks in a region\nThe Metaweb can inform statistical models that predict network assembly\n\n\nExisting approaches connect distributions, traits, and environmental conditions to network predictions, but their implementations remain fragmented."
+  },
+  {
+    "objectID": "index.html#a-common-interface-for-interaction-inference",
+    "href": "index.html#a-common-interface-for-interaction-inference",
+    "title": "Spatial inference of ecological networks",
+    "section": "A common interface for interaction inference",
+    "text": "A common interface for interaction inference\nFor each local assemblage, MetaWeave applies an inference model through a common interface:\n\\[\\widehat{G}_{\\ell}=\\mathcal{I}(C_{\\ell},M),\\] where \\(\\widehat{G}_{\\ell}\\) is the inferred network at locality \\(\\ell\\), \\(C_{\\ell}\\) is its species assemblage, \\(M\\) is the supplied model and \\(\\mathcal{I}\\) is the inference procedure.\n\nMetaweave functions revolve around two ecological inference problems:\n\nSame communities, different interaction assumptions: How do interaction assembly shape network structure?\nSame interaction assumptions, different communities: How does species turnover reshape potential networks?"
+  },
+  {
+    "objectID": "index.html#available-in-cran",
+    "href": "index.html#available-in-cran",
+    "title": "Spatial inference of ecological networks",
+    "section": "Available in CRAN",
+    "text": "Available in CRAN\n\n\ninstall.packages('metaweave')\n\nlibrary(metaweave)"
+  },
+  {
+    "objectID": "index.html#local-assemblages-begin-with-species-distributions",
+    "href": "index.html#local-assemblages-begin-with-species-distributions",
+    "title": "Spatial inference of ecological networks",
+    "section": "Local assemblages begin with species distributions",
+    "text": "Local assemblages begin with species distributions\nassemble_communities()\nBuild local species lists from a named collection of aligned distribution rasters.\nassemblages &lt;- assemble_communities(\n  distributions,\n  min_species = 1L\n)\ndistributions a named list for each trophic level with a raster stack on each slot\n\nOne raster layer per species.\nPresence–absence inputs."
+  },
+  {
+    "objectID": "index.html#interaction-models-express-ecological-assumptions",
+    "href": "index.html#interaction-models-express-ecological-assumptions",
+    "title": "Spatial inference of ecological networks",
+    "section": "Interaction models express ecological assumptions",
+    "text": "Interaction models express ecological assumptions\n\n\n\n\n\n\n\nFunction\nSupplied information\n\n\n\n\nprobability_matrix_model()\nNamed species-pair probabilities or binary regional links\n\n\nblock_model()\nSpecies memberships and probabilities between blocks\n\n\nnew_inference_model()\nA custom prediction function, optionally using traits or local context"
+  },
+  {
+    "objectID": "index.html#inference-retains-the-local-interaction-matrices",
+    "href": "index.html#inference-retains-the-local-interaction-matrices",
+    "title": "Spatial inference of ecological networks",
+    "section": "Inference retains the local interaction matrices",
+    "text": "Inference retains the local interaction matrices\n\n\n\n\n\n\n\nFunction\nScope\n\n\n\n\ninfer_network(assemblage, model)\nOne local community\n\n\ninfer_networks(assemblages, model)\nA collection of local communities\n\n\n\nnetworks &lt;- infer_networks(assemblages, model)\nnetworks$networks[[1]]$matrix"
+  },
+  {
+    "objectID": "index.html#convenience-functions-combine-the-workflow-steps",
+    "href": "index.html#convenience-functions-combine-the-workflow-steps",
+    "title": "Spatial inference of ecological networks",
+    "section": "Convenience functions combine the workflow steps",
+    "text": "Convenience functions combine the workflow steps\n\n\n\n\n\n\n\nFunction\nWhat it combines\n\n\n\n\nreconstruct_networks()\nAssemblage construction and local network inference\n\n\nrun_spatial_inference()\nAssemblage construction, inference, summaries, and mapped metrics\n\n\n\nresult &lt;- run_spatial_inference(\n  distributions,\n  model,\n  min_species = 1L\n)"
+  }
+]

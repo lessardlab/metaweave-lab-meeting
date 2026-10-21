@@ -1,4 +1,4 @@
-﻿# Focused MetaWeave workshop | Setup before the session
+# Focused MetaWeave workshop | Setup before the session
 
 # In RStudio, open this script and choose:
 # Session > Set Working Directory > Choose Directory, then select focused_workshop.
@@ -7,6 +7,8 @@
 # Install packages beforehand if needed (run these lines manually):
 # install.packages(c("remotes", "terra", "ggplot2", "dplyr", "tidyr", "metaweave"))
 
+
+# setwd("YOUR PATH TO/focused_workshop")
 
 library(metaweave)
 library(terra)
