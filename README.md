@@ -58,9 +58,8 @@ Timing is a teaching target, not measured runtime.
 
 ## Model alternatives
 
-03b has three `source()` lines. Keep exactly one active:
+03b has two `source()` lines. 
 
-- `scripts/model_options/archived.R`: saved fitted memberships and probabilities; the live-session default.
 - `scripts/model_options/cassandRa.R`: externally fit the regional matrix, allowing additional time.
 - `scripts/model_options/manual.R`: edit species memberships and between-block probabilities. Initial values are arbitrary teaching examples.
 
